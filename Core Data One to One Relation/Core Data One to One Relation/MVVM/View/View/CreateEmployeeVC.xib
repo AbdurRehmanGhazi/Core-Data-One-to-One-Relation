@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateEmployeeVC" customModule="Core_Data_One_to_One_Relation" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTF" destination="5V0-ah-plG" id="Ka1-RT-fie"/>
+                <outlet property="nameTF" destination="eW2-H8-cxd" id="XAi-Gi-Mju"/>
+                <outlet property="passportNoTF" destination="GIl-lL-tda" id="aAk-AS-esL"/>
+                <outlet property="passportPlaceOfIssueTF" destination="eFz-0Y-l6I" id="jU8-2b-X5I"/>
+                <outlet property="profilePicture" destination="mcs-sX-Yvv" id="nIC-EZ-iBb"/>
+                <outlet property="view" destination="6jf-Ub-uYK" id="oKj-yj-1gm"/>
+            </connections>
+        </placeholder>
+        <view contentMode="scaleToFill" id="6jf-Ub-uYK">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNK-7S-QXz">
+                    <rect key="frame" x="0.0" y="44" width="414" height="269"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mcs-sX-Yvv">
+                            <rect key="frame" x="103.5" y="67.5" width="207" height="133.5"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojF-IC-gs5">
+                            <rect key="frame" x="103.5" y="67" width="207" height="134.5"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="tapProfilePicture:" destination="-1" eventType="touchUpInside" id="lSb-Hc-dm3"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="ojF-IC-gs5" firstAttribute="centerX" secondItem="mcs-sX-Yvv" secondAttribute="centerX" id="6pj-pZ-PgS"/>
+                        <constraint firstItem="ojF-IC-gs5" firstAttribute="width" secondItem="mcs-sX-Yvv" secondAttribute="width" id="8X3-RG-5ey"/>
+                        <constraint firstItem="mcs-sX-Yvv" firstAttribute="width" secondItem="KNK-7S-QXz" secondAttribute="width" multiplier="0.5" id="Da6-Px-DUy"/>
+                        <constraint firstItem="ojF-IC-gs5" firstAttribute="centerY" secondItem="mcs-sX-Yvv" secondAttribute="centerY" id="WUq-GL-lNo"/>
+                        <constraint firstItem="ojF-IC-gs5" firstAttribute="height" secondItem="mcs-sX-Yvv" secondAttribute="height" id="bfF-np-PKP"/>
+                        <constraint firstItem="mcs-sX-Yvv" firstAttribute="height" secondItem="KNK-7S-QXz" secondAttribute="height" multiplier="0.5" id="cBK-VY-LJa"/>
+                        <constraint firstItem="mcs-sX-Yvv" firstAttribute="centerY" secondItem="KNK-7S-QXz" secondAttribute="centerY" id="e5D-lE-HCj"/>
+                        <constraint firstItem="mcs-sX-Yvv" firstAttribute="centerX" secondItem="KNK-7S-QXz" secondAttribute="centerX" id="qh3-wS-Qz0"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="16a-EF-BFD">
+                    <rect key="frame" x="62" y="313" width="290" height="266"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eW2-H8-cxd">
+                            <rect key="frame" x="0.0" y="0.0" width="290" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5V0-ah-plG">
+                            <rect key="frame" x="0.0" y="58" width="290" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passport Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GIl-lL-tda">
+                            <rect key="frame" x="0.0" y="116" width="290" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passport Place of Issue" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eFz-0Y-l6I">
+                            <rect key="frame" x="0.0" y="174" width="290" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nUW-OB-9ha">
+                            <rect key="frame" x="0.0" y="232" width="290" height="34"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmC-dQ-na0">
+                                    <rect key="frame" x="0.0" y="0.0" width="145" height="34"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Create"/>
+                                    <connections>
+                                        <action selector="tapCreateButton:" destination="-1" eventType="touchUpInside" id="qNY-ar-99S"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFZ-vA-xzY">
+                                    <rect key="frame" x="145" y="0.0" width="145" height="34"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Clear">
+                                        <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="tapClearAll:" destination="-1" eventType="touchUpInside" id="POb-M7-XEP"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <gestureRecognizers/>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="gyq-PP-lOc"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="16a-EF-BFD" firstAttribute="width" secondItem="6jf-Ub-uYK" secondAttribute="width" multiplier="0.7" id="Az4-20-EG5"/>
+                <constraint firstItem="16a-EF-BFD" firstAttribute="centerX" secondItem="gyq-PP-lOc" secondAttribute="centerX" id="K65-4X-d3d"/>
+                <constraint firstItem="KNK-7S-QXz" firstAttribute="centerX" secondItem="gyq-PP-lOc" secondAttribute="centerX" id="MYe-Vk-FvI"/>
+                <constraint firstItem="16a-EF-BFD" firstAttribute="top" secondItem="KNK-7S-QXz" secondAttribute="bottom" id="gyd-3q-RoM"/>
+                <constraint firstItem="KNK-7S-QXz" firstAttribute="width" secondItem="6jf-Ub-uYK" secondAttribute="width" id="kqh-MT-aHj"/>
+                <constraint firstItem="KNK-7S-QXz" firstAttribute="top" secondItem="gyq-PP-lOc" secondAttribute="top" id="tx2-SE-qu5"/>
+                <constraint firstItem="KNK-7S-QXz" firstAttribute="height" secondItem="6jf-Ub-uYK" secondAttribute="height" multiplier="0.3" id="yca-2U-pEM"/>
+            </constraints>
+            <point key="canvasLocation" x="112" y="731"/>
+        </view>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+    </objects>
+    <resources>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
